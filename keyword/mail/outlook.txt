@@ -1,0 +1,5 @@
+UserLoggedIn
+New-InboxRule
+HardDelete
+MoveToDeletedItems
+SoftDelete

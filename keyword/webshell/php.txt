@@ -1,0 +1,13 @@
+fsock
+fsockopen
+pfsockopen
+socket
+sock
+eval
+base64
+rot13
+shell
+exec
+system
+os
+passthru
