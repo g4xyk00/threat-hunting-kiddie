@@ -9,12 +9,12 @@
 4. Lateral Movement 
 5. Asset/Data Discovery 
 6. Data Exfiltration
-  - Backdoors
-  - File transfer protocol (FTP)
-  - Web applications
-  - Windows Management Instrumentation (WMI)
-  - Forwarding Rules
-  - Microphones and webcams
+   - Backdoors
+   - File transfer protocol (FTP)
+   - Web applications
+   - Windows Management Instrumentation (WMI)
+   - Forwarding Rules
+   - Peripheral devices (E.g. Microphones and webcams)
 
 - - - -
 # Indicators of Compromise (IoC)
