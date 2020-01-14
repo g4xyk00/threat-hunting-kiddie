@@ -1,4 +1,4 @@
-*Compromise Assessment and Threat Hunting Testing Guide* compile the techniques and Indicator of Compromise (IoC) to perform the testing. 
+*Threat Hunting Kiddie* compile the techniques and Indicator of Compromise (IoC) to perform the Compromise Assessment and Threat Hunting. 
 
 # Indicators of Compromise
 
