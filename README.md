@@ -71,3 +71,11 @@ DNS
 # Mail Server
 ## Outlook 365
 
+
+# Reporting
+
+* Executive Summary
+* Analysis and Predictions
+* Effects and Observability
+* Timeline
+* Source
