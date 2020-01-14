@@ -8,7 +8,7 @@
 * IP address
 
 
-
+- - - -
 # EndPoint
 ##  Log Analysis
 Apache
@@ -47,7 +47,7 @@ Commands | Event ID |  Malicious Action
 ` ` | 4769 | Malicious user (Check Account and Network Information) use TGT to access computer service 
 ` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
 
-
+- - - -
 # Network
 ## Wireshark
 
@@ -68,10 +68,12 @@ ICMP
 DNS
 > dns.qry.name.len > 15 and !mdns
 
+- - - -
 # Mail Server
 ## Outlook 365
 
 
+- - - -
 # Reporting
 
 * Executive Summary
