@@ -1,6 +1,17 @@
 *Threat Hunting Kiddie* compile the techniques and Indicator of Compromise (IoC) to perform the Compromise Assessment and Threat Hunting. 
 
-# Indicators of Compromise
+- - - -
+# Advanced Persistent Threat (APT)
+## Stages
+1. Intelligence Gathering 
+2. Point of Entry 
+3. Comand-and-Control (C2) Communication 
+4. Lateral Movement 
+5. Asset/Data Discovery 
+6. Data Exfiltration
+
+- - - -
+# Indicators of Compromise (IoC)
 
 * File hash
 * File path
@@ -81,3 +92,4 @@ DNS
 * Effects and Observability
 * Timeline
 * Source
+
