@@ -19,12 +19,21 @@
 
 - - - -
 # Indicators of Compromise (IoC)
-
+* File name
 * File hash
 * File path
 * Domain name / URL
 * IP address
+* Port
+* Strings
+* Registry: KeyPath, ValueName, Value
+* Process handle name
 
+## Strings
+### Linux
+```bash
+strings <executable_file>
+```
 
 - - - -
 # EndPoint
@@ -46,6 +55,8 @@ Apache
 for f in $(ls); do echo $(md5sum $f); done > baseline.txt
 diff baseline.txt compare.txt
 ```
+
+
 ## Web Directory Integrity
 Apache
 ```bash
