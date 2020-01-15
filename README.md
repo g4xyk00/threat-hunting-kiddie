@@ -50,12 +50,16 @@ PHP
 find . -type f -name "*.php" | xargs egrep -i "(fsockopen|pfsockopen|exec|shell|eval|rot13|base64|passthru|system)"
 ```
 ## File System Integrity
-Apache
+Apache (Linux)
 ```bash
 for f in $(ls); do echo $(md5sum $f); done > baseline.txt
 diff baseline.txt compare.txt
 ```
 
+Windows
+```bash
+certutil -hashfile <file_path> SHA256
+```
 
 ## Web Directory Integrity
 Apache
