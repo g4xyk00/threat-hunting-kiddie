@@ -117,3 +117,7 @@ DNS
 * Timeline
 * Source
 
+- - - -
+# Further Study
+* [Fortinet Threat Research](https://www.fortinet.com/blog/threat-research.html)
+
