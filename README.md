@@ -29,6 +29,8 @@
 * Strings
 * Registry: KeyPath, ValueName, Value
 * Process handle name
+* Email Subject
+* Email Sender
 
 ## Strings
 ### Linux
