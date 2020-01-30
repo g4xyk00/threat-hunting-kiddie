@@ -40,6 +40,17 @@ strings <executable_file>
 
 - - - -
 # EndPoint
+## Windows Registry
+Key | Location |  
+------------ | ------------- |
+Most Recently Used (MRU) | HKEY_CURRENT_USER\software\microsoft\windows\currentversion\Explorer\RunMRU |
+USB Devices | HKEY_LOCAL_MACHINE\SYSTEM\controlset001\Enum\USBSTOR |
+Internet Explorer | HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\TypedURLs | 
+Mounted Devices | HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices
+Software Installed | HKEY_CURRENT_USER\Software\
+Program Execution | HKEY_CURRENT_USER\SOFTWARE\Microsoft\Currentversion\Search\RecentApps
+
+
 ##  Log Analysis
 Apache
 ```bash
