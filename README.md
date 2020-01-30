@@ -75,6 +75,12 @@ Windows
 certutil -hashfile <file_path> SHA256
 ```
 
+File Checksum Integrity Verifier (FCIV)
+```bash
+fciv.exe -r "<PATH>" -xml results.xml
+fciv.exe -r "<PATH>" -v -xml results.xml
+```
+
 ## Web Directory Integrity
 Apache
 ```bash
