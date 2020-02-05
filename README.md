@@ -117,7 +117,7 @@ SSH
 > tcp contains SSH-2
 
 ICMP
-> data.len > 63 and icmp
+> data.len > 1 and icmp
 
 DNS
 > dns.qry.name.len > 15 and !mdns
