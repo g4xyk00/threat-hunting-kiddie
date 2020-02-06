@@ -46,21 +46,58 @@ Linux
 
 ```bash
 cat /etc/passwd
-cat /etc/sudoers
 
-last -f /var/log/wtmp 
+cut -d: -f1,3 /etc/passwd | grep ":0"  ## Admin priv accounts
+cat /etc/sudoers ## Admin priv accounts
 
+last -f /var/log/wtmp ## User Login History
 strings /var/log/auth.log
 ```
 
+## File System Analysis
+```bash
+find / -name ".*" -ls  ##List all hidden file
+cd /var/www/html && find . -mtime -1  ## Recently modified file
+```
+
+### File System Integrity
+**Apache (Linux)**
+```bash
+for f in $(ls); do echo $(md5sum $f); done > baseline.txt
+diff baseline.txt compare.txt
+```
+
+**Windows**
+```bash
+certutil -hashfile <file_path> SHA256
+```
+
+**File Checksum Integrity Verifier (FCIV)**
+```bash
+fciv.exe -r "<PATH>" -xml results.xml
+fciv.exe -r "<PATH>" -v -xml results.xml
+```
+
+### Webshell
+**PHP (Linux)**
+
+```bash
+find . -type f -name "*.php" | xargs egrep -i "(fsockopen|pfsockopen|exec|shell|eval|rot13|base64|passthru|system)"
+```
+
+**PHP (Windows)**
+
+```bash
+findstr /S /I "fsockopen pfsockopen exec shell eval rot13 base64 passthru system" C:\xampp\htdocs\*.php
+```
+
 ## Process Analysis
-Linux
+**Linux**
+
 ```bash
 history  #Command History
 strings /var/log/auth.log | grep sudo  #Sudo commands history
-
 ```
-
 
 ## Windows Registry
 Key | Location |  
@@ -74,46 +111,14 @@ Program Execution | HKEY_CURRENT_USER\SOFTWARE\Microsoft\Currentversion\Search\R
 
 
 ##  Log Analysis
-Apache (Linux)
+
+**Apache (Linux)**
 ```bash
 cat access.log | grep "<apache_keyword>"
 tail -n 1 access.log 
 less access.log
 ```
-## Webshell
-PHP (Linux)
-```bash
-find . -type f -name "*.php" | xargs egrep -i "(fsockopen|pfsockopen|exec|shell|eval|rot13|base64|passthru|system)"
-```
-PHP (Windows)
-```bash
-findstr /S /I "fsockopen pfsockopen exec shell eval rot13 base64 passthru system" C:\xampp\htdocs\*.php
-```
 
-## File System Integrity
-Apache (Linux)
-```bash
-for f in $(ls); do echo $(md5sum $f); done > baseline.txt
-diff baseline.txt compare.txt
-```
-
-Windows
-```bash
-certutil -hashfile <file_path> SHA256
-```
-
-File Checksum Integrity Verifier (FCIV)
-```bash
-fciv.exe -r "<PATH>" -xml results.xml
-fciv.exe -r "<PATH>" -v -xml results.xml
-```
-
-## Web Directory Integrity
-Apache
-```bash
-cd /var/www/html && find . -mtime -1
-```
-## Log Analysis
 ### Windows Event Log
 
 Commands | Event ID |  Malicious Action
