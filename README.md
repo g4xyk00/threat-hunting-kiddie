@@ -55,10 +55,18 @@ strings /var/log/auth.log
 ```
 
 ## File System Analysis
+**Linux**
 ```bash
 find / -name ".*" -ls  ##List all hidden file
 cd /var/www/html && find . -mtime -1  ## Recently modified file
 ```
+
+**Windows**
+```bash
+dir /ah ## List hidden file
+forfiles /P C:\xampp\htdocs /S /D +01/06/2020 ## File modified after 6-Jan-2020
+```
+
 
 ### File System Integrity
 **Apache (Linux)**
