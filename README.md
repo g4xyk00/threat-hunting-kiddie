@@ -40,6 +40,28 @@ strings <executable_file>
 
 - - - -
 # EndPoint
+## Account Analysis
+### Account Usage
+Linux
+
+```bash
+cat /etc/passwd
+cat /etc/sudoers
+
+last -f /var/log/wtmp 
+
+strings /var/log/auth.log
+```
+
+## Process Analysis
+Linux
+```bash
+history  #Command History
+strings /var/log/auth.log | grep sudo  #Sudo commands history
+
+```
+
+
 ## Windows Registry
 Key | Location |  
 ------------ | ------------- |
@@ -91,7 +113,8 @@ Apache
 ```bash
 cd /var/www/html && find . -mtime -1
 ```
-## Windows Event Log
+## Log Analysis
+### Windows Event Log
 
 Commands | Event ID |  Malicious Action
 ------------ | ------------- | -------------
@@ -105,6 +128,17 @@ Commands | Event ID |  Malicious Action
 ` ` | 4769 | Malicious user (Check Account and Network Information) use TGT to access computer service 
 ` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
 
+## Log (Linux)
+```
+/var/log
+```
+
+## Process Analysis
+### Scheduled Tasks
+Linux
+```
+cat /etc/crontab
+```
 
 - - - -
 # Network
