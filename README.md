@@ -52,17 +52,22 @@ Program Execution | HKEY_CURRENT_USER\SOFTWARE\Microsoft\Currentversion\Search\R
 
 
 ##  Log Analysis
-Apache
+Apache (Linux)
 ```bash
 cat access.log | grep "<apache_keyword>"
 tail -n 1 access.log 
 less access.log
 ```
 ## Webshell
-PHP
+PHP (Linux)
 ```bash
 find . -type f -name "*.php" | xargs egrep -i "(fsockopen|pfsockopen|exec|shell|eval|rot13|base64|passthru|system)"
 ```
+PHP (Windows)
+```bash
+findstr /S /I "fsockopen pfsockopen exec shell eval rot13 base64 passthru system" C:\xampp\htdocs\*.php
+```
+
 ## File System Integrity
 Apache (Linux)
 ```bash
