@@ -183,6 +183,18 @@ DNS
 # Mail Server
 ## Outlook 365
 
+* CreationTime
+* Operation
+  * UserLoggedIn
+  * New-InboxRule
+  * HardDelete
+  * MoveToDeletedItems
+  * SoftDelete
+* ClientIP
+* UserId
+* ExtendedProperties
+  * UserAgent
+
 
 - - - -
 # Reporting
