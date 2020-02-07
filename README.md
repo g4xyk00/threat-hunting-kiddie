@@ -17,7 +17,6 @@
    - Forwarding Rules
    - Peripheral devices (E.g. Microphones and webcams)
 
-
 - - - -
 # Indicators of Compromise (IoC)
 * File name
@@ -32,17 +31,18 @@
 * Email Subject
 * Email Sender
 
+- - - -
+
+# Endpoint - Linux
+
 ## Strings
 ### Linux
 ```bash
 strings <executable_file>
 ```
 
-- - - -
-# EndPoint
 ## Account Analysis
 ### Account Usage
-Linux
 
 ```bash
 cat /etc/passwd
@@ -55,26 +55,62 @@ strings /var/log/auth.log
 ```
 
 ## File System Analysis
-**Linux**
 ```bash
 find / -name ".*" -ls  ##List all hidden file
 cd /var/www/html && find . -mtime -1  ## Recently modified file
 ```
 
-**Windows**
-```bash
-dir /ah ## List hidden file
-forfiles /P C:\xampp\htdocs /S /D +01/06/2020 ## File modified after 6-Jan-2020
-```
-
-
 ### File System Integrity
-**Apache (Linux)**
 ```bash
 for f in $(ls); do echo $(md5sum $f); done > baseline.txt
 diff baseline.txt compare.txt
 ```
 
+### Webshell
+**PHP**
+```bash
+find . -type f -name "*.php" | xargs egrep -i "(fsockopen|pfsockopen|exec|shell|eval|rot13|base64|passthru|system)"
+```
+
+## Process Analysis
+
+```bash
+history  #Command History
+strings /var/log/auth.log | grep sudo  #Sudo commands history
+```
+
+##  Log Analysis
+
+**Apache**
+```bash
+cat access.log | grep "<apache_keyword>"
+tail -n 1 access.log 
+less access.log
+
+- - - -
+
+# Endpoint - Windows 
+
+## File System Analysis
+
+```bash
+dir /ah ## List hidden file
+forfiles /P C:\xampp\htdocs /S /D +01/06/2020 ## File modified after 6-Jan-2020
+```
+
+## Log 
+```
+/var/log
+```
+
+## Process Analysis
+### Scheduled Tasks
+Linux
+```
+cat /etc/crontab
+```
+
+### File System Integrity
 **Windows**
 ```bash
 certutil -hashfile <file_path> SHA256
@@ -87,24 +123,10 @@ fciv.exe -r "<PATH>" -v -xml results.xml
 ```
 
 ### Webshell
-**PHP (Linux)**
-
-```bash
-find . -type f -name "*.php" | xargs egrep -i "(fsockopen|pfsockopen|exec|shell|eval|rot13|base64|passthru|system)"
-```
-
-**PHP (Windows)**
+**PHP**
 
 ```bash
 findstr /S /I "fsockopen pfsockopen exec shell eval rot13 base64 passthru system" C:\xampp\htdocs\*.php
-```
-
-## Process Analysis
-**Linux**
-
-```bash
-history  #Command History
-strings /var/log/auth.log | grep sudo  #Sudo commands history
 ```
 
 ## Windows Registry
@@ -120,13 +142,6 @@ Program Execution | HKEY_CURRENT_USER\SOFTWARE\Microsoft\Currentversion\Search\R
 
 ##  Log Analysis
 
-**Apache (Linux)**
-```bash
-cat access.log | grep "<apache_keyword>"
-tail -n 1 access.log 
-less access.log
-```
-
 ### Windows Event Log
 
 Commands | Event ID |  Malicious Action
@@ -141,17 +156,6 @@ Commands | Event ID |  Malicious Action
 ` ` | 4769 | Malicious user (Check Account and Network Information) use TGT to access computer service 
 ` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
 
-## Log (Linux)
-```
-/var/log
-```
-
-## Process Analysis
-### Scheduled Tasks
-Linux
-```
-cat /etc/crontab
-```
 
 - - - -
 # Network
