@@ -17,6 +17,44 @@
    - Forwarding Rules
    - Peripheral devices (E.g. Microphones and webcams)
 
+## Data
+
+* Browser and email clients	
+  * Chrome based browsers
+  * Firefox based browsers
+  * Opera
+  * Outlook
+  * Thunderbird
+
+* Crypto-wallets
+  * Armory
+  * Atomic
+  * Bytecoin
+  * Electrum
+  * Ethereum
+  * Jaxx
+  * MultiBit
+
+* Other software and accounts	
+  	* Authy
+  	* BattleNet
+  	* Discord
+  	* Jabber
+  	* NordVPN
+  	* Osu
+  	* Pidgin
+  	* Skype
+  	* Steam
+  	* Telegram
+  	* WinFTP
+  	* WinSCP
+* Browser and email clients
+
+* Crypto-wallets
+
+## Read More
+* [Predator the Thief](https://research.checkpoint.com/2020/predator-the-thief/)
+
 - - - -
 # Indicators of Compromise (IoC)
 * File name
