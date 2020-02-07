@@ -48,9 +48,6 @@
   	* Telegram
   	* WinFTP
   	* WinSCP
-* Browser and email clients
-
-* Crypto-wallets
 
 ## Read More
 * [Predator the Thief](https://research.checkpoint.com/2020/predator-the-thief/)
