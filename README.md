@@ -123,10 +123,6 @@ tail -n 1 access.log
 less access.log
 ```
 
-- - - -
-
-# Endpoint - Windows 
-
 ## File System Analysis
 
 ```bash
@@ -146,10 +142,12 @@ Linux
 cat /etc/crontab
 ```
 
+- - - -
+
+
 # Endpoint - Windows
 
 ### File System Integrity
-**Windows**
 ```bash
 certutil -hashfile <file_path> SHA256
 ```
