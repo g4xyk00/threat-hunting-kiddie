@@ -145,6 +145,8 @@ Linux
 cat /etc/crontab
 ```
 
+# Endpoint - Windows
+
 ### File System Integrity
 **Windows**
 ```bash
