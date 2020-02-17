@@ -191,6 +191,8 @@ Commands | Event ID |  Malicious Action
 ` ` | 4768 | Valid user (Check Account and Network Information) request Ticket-granting Ticket (TGT)
 ` ` | 4769 | Malicious user (Check Account and Network Information) use TGT to access computer service 
 ` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
+` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
+` ` | 1102 | The audit log was cleared
 
 
 - - - -
