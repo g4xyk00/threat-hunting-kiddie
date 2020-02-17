@@ -193,6 +193,7 @@ Commands | Event ID |  Malicious Action
 ` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
 ` ` | 4770 | Malicious user (Check Account and Network Information) renew TGT 
 ` ` | 1102 | The audit log was cleared
+`msf5 exploit(windows/smb/ms17_010_psexec) > expoit` | 7045 | A malicious service was installed in the system
 
 
 - - - -
