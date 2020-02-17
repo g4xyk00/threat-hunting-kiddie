@@ -121,6 +121,7 @@ strings /var/log/auth.log | grep sudo  #Sudo commands history
 cat access.log | grep "<apache_keyword>"
 tail -n 1 access.log 
 less access.log
+```
 
 - - - -
 
