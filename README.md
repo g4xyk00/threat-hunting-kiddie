@@ -5,12 +5,15 @@
 
 > "Senior analysts take junior analysts on 'hunting trips.' A senior investigator who has discovered a novel or clever way to possibly detect intruders guides one or more junior analysts through data and systems looking for signs of the enemy. Upon validating the technique (and responding to any enemy actions), the hunting team should work to incorporate the new detection method into the repeatable processes used by SOC type analysts. This idea of developing novel methods, testing them into the wild, and operationalizing them is the key to fighting modern adversaries. " -- [Become a Hunter](http://docs.media.bitpipe.com/io_24x/io_24618/item_370437/informationsecurity_july_aug2011_final.pdf) by Richard Beijtlich
 
-## Methodology [Hunt Evil: Your Practical Guide to Threat Hunting, p.g. 28](https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf)
+## Methodology 
 
 1. Hypothesis - What are you looking for?
 2. Data - Investigation
 3. Techniques - Uncover patterns and IOCs
 4. Takeaways - Inform and enrich analytics
+
+### Reference
+- [Hunt Evil: Your Practical Guide to Threat Hunting, p.g. 28](https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf)
 
 - - - -
 # Advanced Persistent Threat (APT)
