@@ -1,6 +1,11 @@
 *Threat Hunting Kiddie* compile the techniques and Indicator of Compromise (IoC) to perform the Compromise Assessment and Threat Hunting. 
 
 - - - -
+# Threat Hunting
+
+> "Senior analysts take junior analysts on 'hunting trips.' A senior investigator who has discovered a novel or clever way to possibly detect intruders guides one or more junior analysts through data and systems looking for signs of the enemy. Upon validating the technique (and responding to any enemy actions), the hunting team should work to incorporate the new detection method into the repeatable processes used by SOC type analysts. This idea of developing novel methods, testing them into the wild, and operationalizing them is the key to fighting modern adversaries. " -- [Become a Hunter](http://docs.media.bitpipe.com/io_24x/io_24618/item_370437/informationsecurity_july_aug2011_final.pdf) by Richard Beijtlich
+
+- - - -
 # Advanced Persistent Threat (APT)
 ## Stages
 1. Intelligence Gathering 
