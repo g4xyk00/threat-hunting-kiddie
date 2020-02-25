@@ -14,6 +14,7 @@
 
 ### Reference
 - [Hunt Evil: Your Practical Guide to Threat Hunting, p.g. 28](https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf)
+- [The ThreatHunting Project](https://github.com/ThreatHuntingProject/ThreatHunting/tree/master/hunts)
 
 - - - -
 # Advanced Persistent Threat (APT)
