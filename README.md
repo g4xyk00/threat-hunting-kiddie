@@ -212,6 +212,11 @@ Commands | Event ID |  Malicious Action
 `msf5 exploit(windows/smb/ms17_010_psexec) > expoit` | 7045 | A malicious service was installed in the system
 
 
+## File Analysis
+```powershell
+Get-AuthenticodeSignature .\cmd.exe | ConvertTo-Json -Compress
+```
+
 - - - -
 # Network
 ## Wireshark
