@@ -217,6 +217,11 @@ Commands | Event ID |  Malicious Action
 Get-AuthenticodeSignature .\cmd.exe | ConvertTo-Json -Compress
 ```
 
+## Process Analysis
+```bash
+wmic process get processid,parentprocessid,executablepath
+```
+
 - - - -
 # Network
 ## Wireshark
