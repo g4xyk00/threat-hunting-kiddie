@@ -222,6 +222,10 @@ Get-AuthenticodeSignature .\cmd.exe | ConvertTo-Json -Compress
 wmic process get processid,parentprocessid,executablepath
 ```
 
+```bash
+Get-Process | Where-Object -Property path -match svchost.exe | Group-Object path | Format-Table count,name
+```
+
 - - - -
 # Network
 ## Wireshark
