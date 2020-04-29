@@ -156,6 +156,21 @@ Try{
 }
 ```
 
+To test Syslog Server:
+```powershell
+$EndPoint = "192.168.56.1" 
+$Port = "514"
+$Message = "Test Syslog." 
+
+$Socket = New-Object System.Net.Sockets.TCPClient([System.Net.IPAddress]::Parse([System.Net.Dns]::GetHostAddresses($EndPoint)),$Port) 
+$Stream = $Socket.GetStream() 
+$Writer = New-Object System.IO.StreamWriter($Stream)
+$Message | % { $Writer.WriteLine($_);$Writer.Flush();}
+
+$Stream.Close()
+$Socket.Close()
+```
+
 ## File System Analysis
 
 ```bash
