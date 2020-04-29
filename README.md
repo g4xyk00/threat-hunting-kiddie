@@ -156,7 +156,7 @@ Try{
 }
 ```
 
-To test Syslog Server:
+To test Syslog Server (Powershell):
 ```powershell
 $EndPoint = "192.168.56.1" 
 $Port = "514"
@@ -169,6 +169,11 @@ $Message | % { $Writer.WriteLine($_);$Writer.Flush();}
 
 $Stream.Close()
 $Socket.Close()
+```
+
+To test Syslog Server (Linux):
+```bash
+echo 'Test Syslog' > /dev/tcp/192.168.56.1/514
 ```
 
 ## File System Analysis
