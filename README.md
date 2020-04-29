@@ -139,6 +139,23 @@ tail -n 1 access.log
 less access.log
 ```
 
+**Powershell Syslog Server**
+```powershell
+$port = 514
+$endpoint = New-Object System.Net.IPEndPoint([IPAddress]::Any, $port)
+
+Try{
+    while($true){
+        $socket = New-Object System.Net.Sockets.UdpClient $port
+        $content = $socket.Receive([ref]$endpoint)
+        $socket.Close()
+        [Text.Encoding]::ASCII.GetString($content)
+    }
+} Catch {
+	
+}
+```
+
 ## File System Analysis
 
 ```bash
