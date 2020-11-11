@@ -210,6 +210,11 @@ certutil -hashfile <file_path> SHA256
 fciv.exe -r "<PATH>" -xml results.xml
 fciv.exe -r "<PATH>" -v -xml results.xml
 ```
+**File System Integrity (Powershell)**
+```powershell
+diff (gc .\1.txt) (gc .\2.txt)
+```bash
+
 
 ### Webshell
 **PHP**
