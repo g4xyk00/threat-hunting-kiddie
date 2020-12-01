@@ -219,7 +219,7 @@ diff (gc .\1.txt) (gc .\2.txt)
 **PHP**
 
 ```bash
-findstr /S /I "fsockopen pfsockopen exec shell eval rot13 base64 passthru system" C:\xampp\htdocs\*.php
+findstr /S /I "fsockopen( pfsockopen( exec( shell( eval( rot13( base64( passthru( system(" C:\xampp\htdocs\*.php
 ```
 
 ## Windows Registry
