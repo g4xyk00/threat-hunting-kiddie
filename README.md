@@ -253,6 +253,15 @@ Commands | Event ID |  Malicious Action
 `msf5 exploit(windows/smb/ms17_010_psexec) > expoit` | 7045 | A malicious service was installed in the system
 
 
+### Application and Service Log
+
+Event Viewer > Application and Service Log > Microsoft > Windows > 
+
+Source | Event ID |  Malicious Action 
+------------ | ------------- | ------------- 
+TerminalServices-LocalSessionManager | 1149 | Remote Desktop Services: User authentication succeeded
+
+
 ## File Analysis
 ```powershell
 Get-AuthenticodeSignature .\cmd.exe | ConvertTo-Json -Compress
