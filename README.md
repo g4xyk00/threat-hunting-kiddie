@@ -351,7 +351,7 @@ loki.exe
 
 ```bash
 mandiant_ioc_finder.exe collect
-mandiant_ioc_finder.exe report -i <IOC file>
+mandiant_ioc_finder.exe report -s ./audits -i <IOC file> -t html
 ```
 
 
