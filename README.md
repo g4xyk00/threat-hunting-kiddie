@@ -315,6 +315,29 @@ DNS
 * Timeline
 * Source
 
+
+- - - -
+# Automated Tool
+
+## Loki
+
+[Download](https://github.com/Neo23x0/Loki/releases)
+
+```bash
+loki-upgrader.exe
+loki.exe
+```
+
+## FireEye IOC Finder 
+
+[Download](https://www.fireeye.com/services/freeware/ioc-finder-download-confirmation.html)
+
+```bash
+mandiant_ioc_finder.exe collect
+mandiant_ioc_finder.exe report -i <IOC file>
+```
+
+
 - - - -
 # Further Study
 * [Fortinet Threat Research](https://www.fortinet.com/blog/threat-research.html)
