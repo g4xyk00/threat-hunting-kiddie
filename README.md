@@ -183,10 +183,6 @@ dir /ah ## List hidden file
 forfiles /P C:\xampp\htdocs /S /D +01/06/2020 ## File modified after 6-Jan-2020
 ```
 
-```powershell
-Get-ChildItem C:\ -Force -Recurse | Select-Object FullName, CreationTime, LastAccessTime, LastWriteTime, Mode | Export-csv C:\Users\Administrator\Desktop\Analysis\get-childitem.csv
-```
-
 ## Log 
 ```
 /var/log
@@ -260,6 +256,14 @@ Commands | Event ID |  Malicious Action
 ## File Analysis
 ```powershell
 Get-AuthenticodeSignature .\cmd.exe | ConvertTo-Json -Compress
+```
+
+## File System Analysis
+
+To retrieve timestamp for file activites 
+
+```powershell
+Get-ChildItem C:\ -Force -Recurse | Select-Object FullName, CreationTime, LastAccessTime, LastWriteTime, Mode | Export-csv C:\Users\Administrator\Desktop\Analysis\get-childitem.csv
 ```
 
 ## Process Analysis
