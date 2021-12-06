@@ -345,16 +345,6 @@ loki-upgrader.exe
 loki.exe
 ```
 
-## FireEye IOC Finder 
-
-[Download](https://www.fireeye.com/services/freeware/ioc-finder-download-confirmation.html)
-
-```bash
-mandiant_ioc_finder.exe collect
-mandiant_ioc_finder.exe report -s ./audits -i <IOC file> -t html
-```
-
-
 - - - -
 # Further Study
 * [Fortinet Threat Research](https://www.fortinet.com/blog/threat-research.html)
