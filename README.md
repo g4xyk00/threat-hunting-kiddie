@@ -322,6 +322,8 @@ DNS
 * ExtendedProperties
   * UserAgent
 
+The tool converts JSON data from 'AuditData' in o365 audit logs to a new CSV file for easier analysis:
+* [Office 365 Audit Logs - JSON to CSV Converter](https://github.com/g4xyk00/o365-auditlog-json-converter)
 
 - - - -
 # Reporting
