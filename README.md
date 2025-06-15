@@ -17,6 +17,10 @@
 - [The ThreatHunting Project](https://github.com/ThreatHuntingProject/ThreatHunting/tree/master/hunts)
 
 - - - -
+# GetFileHash.bat
+GetFileHash.bat is a batch file that collects all files on a Windows OS and computes the SHA256 hash for each file.
+
+- - - -
 # Advanced Persistent Threat (APT)
 ## Stages
 1. Intelligence Gathering 
