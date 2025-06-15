@@ -33,50 +33,50 @@ type path_full.txt | findstr /V /I /C:"$Recycle.Bin" /C:"Program Files" /C:"Prog
 echo [+] Generate SHA256 Hashes for 
 echo     [*] $Recycle.Bin
 for /f "delims=" %%P in ('type path_recycle_bin.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
 		echo %%P:%%H >> hash_recycle_bin.txt
 	)
 )
 
-echo     [*] Program Files
-for /f "delims=" %%P in ('type path_program_files.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
-		echo %%P:%%H >> hash_program_files.txt
-	)
-)
-
-echo     [*] Program Files (x86)
-for /f "delims=" %%P in ('type path_program_files_x86.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
-		echo %%P:%%H >> hash_program_files_x86.txt
+echo     [*] Others
+for /f "delims=" %%P in ('type path_others.txt') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+		echo %%P:%%H >> hash_others.txt
 	)
 )
 
 echo     [*] ProgramData
 for /f "delims=" %%P in ('type path_program_data.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
 		echo %%P:%%H >> hash_program_data.txt
+	)
+)
+
+echo     [*] Program Files (x86)
+for /f "delims=" %%P in ('type path_program_files_x86.txt') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+		echo %%P:%%H >> hash_program_files_x86.txt
+	)
+)
+
+echo     [*] Program Files
+for /f "delims=" %%P in ('type path_program_files.txt') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+		echo %%P:%%H >> hash_program_files.txt
 	)
 )
 
 echo     [*] Users
 for /f "delims=" %%P in ('type path_users.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
 		echo %%P:%%H >> hash_users.txt
 	)
 )
 
 echo     [*] Windows
 for /f "delims=" %%P in ('type path_windows.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
+    for /f "delims=" %%H in ('certutil -hashfile "%%P" SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
 		echo %%P:%%H >> hash_windows.txt
-	)
-)
-
-echo     [*] Others
-for /f "delims=" %%P in ('type path_others.txt') do (
-    for /f "delims=" %%H in ('certutil -hashfile %%P SHA256 ^| findstr /n "^" ^| findstr "^2:"') do (
-		echo %%P:%%H >> hash_others.txt
 	)
 )
 
